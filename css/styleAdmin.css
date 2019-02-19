@@ -1,0 +1,67 @@
+/*Meni za admin panel*/
+.menu {
+	background-color: #40DBDB;
+	
+}
+.menu ul li a {
+	margin-right: 50px;
+}
+
+.tekst {
+	margin: 0 5px 0 5px;
+	font-family: 'Permanent Marker', cursive;
+}
+.tekst:first-child {
+	margin-top: 10px;
+}
+
+
+/*Opcije*/
+.options {
+	background-color: white;
+}
+
+.options ul li a {
+	font-size: 17px;
+}
+.options ul li {
+	margin-bottom: 15px;
+}
+.options ul li:hover{
+	background-color: rgb(173, 218, 221) !important;
+}
+.material-icons {
+	color: #368ce7 !important;
+}
+.inline-icon {
+   vertical-align: text-bottom !important;
+   font-size: 25px !important;
+}
+
+.inline-icon2 {
+	vertical-align: text-bottom !important;
+	font-size: 30px !important;
+ }
+
+
+span.agencija {
+	font-family: 'Lobster', cursive;
+	font-size: 40px;
+	margin-left: 50px;
+}
+
+p.adminiOpis {
+	font-family: 'Permanent Marker', cursive !important;
+}
+
+.yourComment{
+	font-family: 'Oswald', sans-serif; 
+	font-size: 26px; 
+	margin-top: 40px; 
+	margin-left: 10px;
+}
+
+.closebtn:hover{
+	cursor: pointer;
+	color:white;
+}

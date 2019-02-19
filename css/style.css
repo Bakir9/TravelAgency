@@ -1,0 +1,434 @@
+body {
+	background-color: #f6f6f6;
+}
+.brand-logo {
+	margin-top: 50px;
+}
+
+/*Login forma*/
+.prijava {
+	margin-top: 100px;
+}
+.prijava .card {
+	background: rgba(0,0,0, .6);
+}
+
+.prijava label {
+	font-size: 16px;
+	color: #ccc;
+}
+.prijava input {
+	font-size: 22px;
+	color: #fff;
+}
+
+.prijava button:hover {
+	padding: 0px 40px;
+}
+/*Login forma*/
+.login ul {
+	margin:0;
+	padding: 0;
+}
+.login ul li {
+	display: inline;
+}
+.login ul li a {
+	font-size: 14px;
+}
+.nav-wrapper {
+	margin-left: 100px;
+}
+.nav-wrapper ul li a{
+	padding-left: 20px;
+	padding-right: 30px;
+	margin: 25px 0 0 0;
+	height: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+}
+
+.nav-wrapper ul li a:hover{
+	color: #368ce7;
+}
+li a.dest{
+	padding: 0 15px 0 20px;
+}
+
+.nav-wrapper ul li:last-child{
+	margin-right: 80px;
+}
+
+p.putovanja {
+	font-size: 40px;
+	font-family: 'Bowlby One SC', cursive;
+	text-transform: uppercase;
+	margin: 0 0 0 20px;
+	color: #368ce7;
+
+}
+.ikone {
+	color:  #686464 !important;
+	font-size: 350% !important;
+}
+
+i:hover {
+	color: #81d4fa !important;
+}
+
+.collapsible-body{
+display: block;
+padding-top: 10px;
+padding-bottom: 15px;
+padding-left: 15px;
+padding-right: 15px;
+}
+
+.collapsible-header {
+	font-family: 'Bowlby One SC', cursive !important;
+	color: #5d696b !important;
+}
+.collapsible-header a {
+	color: #5d696b !important;
+}
+
+p.info{
+	font-size: 35px;
+	font-family: 'Anton', sans-serif;
+	margin:0;
+}
+
+p.info-let{
+	font-size: 23px;
+	font-family: 'Cabin', sans-serif;
+	margin: 0;
+}
+.foot .collapsible{
+	background-color: #eeeeee;
+	opacity: 0.8;
+	border:none !important;
+}
+
+.foot ul li  a{
+	font-family: 'Oswald', sans-serif !important;
+	color: #5d696b;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.foot ul li  a:hover{
+	color: #1f1d0c;
+}
+
+h1 {
+	margin : 0;
+}
+
+p.mail {
+	font-size: 25px;
+	font-family: 'Oswald', sans-serif !important;
+}
+p.mail2{
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	margin-top: 0;
+}
+
+h1.agen {
+	font-size: 35px;
+	font-family: 'Anton', sans-serif;
+	margin-top: 25px;	
+}
+
+p.karte {
+	font-size: 20px;
+	text-align: justify;
+}
+
+.info-dest {
+	font-size: 15px;
+	font-family: 'Cabin', sans-serif !important;
+}
+
+.info-dest1 {
+	font-size: 17px;
+	font-family: 'Sanchez', serif !important; 
+}
+
+.btn {
+	border-radius: 25px;
+}
+.btn:hover{
+	background-color:red;
+}
+
+.inline-icon {
+	vertical-align: text-bottom !important;
+	font-size: 25px !important;
+	margin-right: 5px;
+ }
+ ul.tabs li.tab a {
+	font-size: 22px;
+ }
+ .no-uppercase {
+	 text-transform: none;
+ }
+ .mt {
+	 margin-top: 25px;
+ }
+
+ .popular:hover{
+	 color:#81d4fa;
+ }
+.pozadina {
+    background-image: url("../images/proba3.jpg");
+	height: 300px;
+	width: 1380px;
+    background-size: cover;
+}
+h3.best {
+	opacity:0.7; 
+	font-family: 'Oswald', sans-serif; 
+	margin-bottom: 0;
+	font-size: 35px;
+}
+
+.opis {
+	font-size:18px; 
+	opacity: 0.7; 
+	font-family: 'Oswald', sans-serif; 
+	margin-top:0;
+}
+
+.opis2{
+	font-size: 18px; 
+	font-family: 'Raleway', sans-serif; 
+	margin: 20px 0 0 60px;
+}
+
+.opis3 {
+	font-size: 38px; 
+	font-family: 'Oswald', sans-serif;
+	margin: 70px 0 0 55px;
+}
+
+.offer {
+	font-size:16px; 
+	opacity: 0.7; 
+	font-family: 'Nanum Ghotic', sans-serif; 
+	margin-top:0;
+}
+.details{
+	border-radius: 5px; 
+	margin: 125px 0 0 5px; 
+	background-color:red;
+}
+
+.details:hover{
+	background-color: #368ce7;
+}
+
+.ponuda {
+	font-size: 25px !important; 
+	font-family: 'Oswald', sans-serif !important;
+	opacity: 0.6;
+}
+
+.ponuda:hover{
+	color: #368ce7;
+}
+
+.detaljiDestinacije {
+	margin: 0; 
+	font-size: 22px;
+	font-family: 'Anton', sans-serif;
+	opacity: 0.6;
+}
+
+.card .card-action a {
+	color: #368ce7 !important;
+}
+
+.card .card-action a:hover{
+	color: black;
+	opacity: 0.6;
+}
+.sponsor {
+	font-size:50px; 
+	border:1px solid black; 
+	padding: 20px; 
+	margin:0; 
+	opacity:0.5;
+	font-family: 'Raleway', sans-serif; 
+}
+
+.inline-icon {
+	vertical-align: text-bottom !important;
+	font-size: 25px !important;
+ }
+p.aboutas {
+	font-size: 16px;
+	margin-bottom: 3xp;
+	margin-top: 3px;
+	font-family: 'Raleway', sans-serif; 
+	opacity: 0.5;
+}
+
+p.aboutas:hover{
+	color: #368ce7;
+}
+.recent {
+	margin-top:20px;
+	font-family: 'Raleway', sans-serif; 
+}
+
+.pretraga {
+	background-color:#03a9f4 !important;
+}
+.blog {
+	font-size: 50px;
+	color:white;
+	background-color: #03a9f4;
+	margin-top: 0;
+	margin-bottom: 5px;
+	font-family: 'Paytone One', sans-serif;
+}
+.blogTitle {
+	font-size: 30px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	font-family: 'Raleway', sans-serif; 
+}
+.blogDatum {
+	font-size: 18px;
+	width: 100px;
+	height: 35px;
+	margin: 2px 0 0 0;
+	color:white;
+	background-color: #368ce7;
+	font-family: 'Raleway', sans-serif; 
+}
+.blogPosted {
+	font-size: 16px;
+	margin: 0;
+	color: black;
+	font-family: 'Raleway', sans-serif; 
+	opacity: 0.5;
+}
+.posted {
+	color: #03a9f4;
+}
+.blogText{
+	font-size: 14px;
+	font-family: 'Raleway', sans-serif; 
+	text-align: left;
+}
+.comment {
+	font-size: 15px;
+	font-family: 'Raleway', sans-serif; 
+}
+.comment:hover {
+	cursor: pointer;
+}
+
+#more {
+	display: none;
+}
+
+.mbl {
+	margin-bottom: 0 !important;
+	margin-right: 0 !important;
+}
+
+.touch{
+	font-size: 28px;
+	font-family: 'Paytone One', sans-serif;
+	opacity: 0.7;
+}
+.fillForm{
+	font-size: 18px;
+	font-family: 'Paytone One', sans-serif;
+	opacity: 0.9;
+}
+
+.support {
+	font-size: 16px;
+	font-family: 'Paytone One', sans-serif;
+	opacity: 0.9;
+	margin-top:25px; 
+	margin-bottom: 0px;
+}
+
+.adress1{
+	margin-bottom: 5px;
+	margin-top: 5px;
+	font-size: 14px;
+	opacity: 0.9;
+	font-family: 'Paytone One', sans-serif;
+}
+
+.blogPregled {
+	font-size: 16px;
+}
+h5.detalji {
+	font-family: 'Raleway', sans-serif; 
+	font-size: 30px;
+}
+/*OVERLAY*/
+.proba{
+	position: relative;
+  	width: 100%;
+}
+.overlay {
+ 	margin-left:10px;
+	position: absolute;
+	top: 86.5%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	width: 98.5%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgb(99, 194, 226);
+  }
+  .proba:hover .overlay {
+	opacity: 0.7;
+  } 
+  .text {
+	  font-size: 26px;
+	  font-family: 'Anton', sans-serif;
+		color: white;
+  }
+/*OVERLAY*/
+
+/*OVERLAY ZA ABOUT AS*/
+.overlay2 {
+ position: absolute;
+ top: 80%;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ height: 50px;
+ width: 100%;
+ opacity: 0;
+ transition: .5s ease;
+ background-color: rgb(99, 194, 226);
+ }
+ .proba:hover .overlay2 {
+ opacity: 0.7;
+ } 
+ .text2 {
+	 margin-left: 10px;
+	 font-size: 20px;
+	 font-family: 'Anton', sans-serif;
+	 color: white;
+ }
+/* OVERLAY ZA ABOUT AS*/
+.reservation {
+	font-size: 40px; 
+	font-family: 'Anton', sans-serif; 
+	margin-left: 10px;
+	margin-top: 5px;
+	color:rgb(99, 194, 226);
+}
