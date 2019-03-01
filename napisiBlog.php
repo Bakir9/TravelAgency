@@ -24,9 +24,9 @@
         // Select file type (png, jpg,jpeg, gif)
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         // Valid file extensions
-        $extensions_arr = array("jpg","jpeg","png","gif");
+        $extensions_arr = array("jpg","jpeg","png","gif", " ");
         
-        if( in_array($imageFileType,$extensions_arr) ){
+        if( in_array($imageFileType,$extensions_arr)){
             
             $query = "INSERT INTO blog VALUES ('0','$dbidkorisnika','$ime_korisnika', '$naziv','$sazetak','$tekst','$datum',
             '$vrijeme', '$name')";
@@ -42,6 +42,13 @@
                 $message = '<div id="message" class="col s12" >
                                 <div class="row card-panel light-green accent-2">
                                     <div class="green-text text-light-green darken-4 col s12">Uspješno kreiran novi blog !</div>
+                                </div>
+                            </div>';
+            }
+            else {
+                $message = '<div id="message" class="col s12">
+                                <div class="row card-panel red darken-4">
+                                    <div class="white-text center-align s12">Pogrešni podaci, probajte ponovo !</div>
                                 </div>
                             </div>';
             }

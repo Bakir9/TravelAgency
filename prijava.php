@@ -33,10 +33,11 @@
                 $_SESSION['korisnik'] = $korisnik;
                 $_SESSION['tip'] = $tip;
                 
-                header('Location: adminPanel.php');
                 include('log.php');
                 $nazivAktivnosti = "Prijava";
                 logActivity($dbidkorisnika, $korisnik, $nazivAktivnosti, $conn);
+                header('Location: index.php');
+                
                 
             }
             else {
@@ -91,6 +92,7 @@
                         <div class="center-align input-field">
                             <button class="btn-large red" value="submit"
                             type="submit" name="submit">Login</button>
+                            <a href="index.php" style="margin-left: 20px;">Back to home</a>
                         </div>
                            
                     </div>

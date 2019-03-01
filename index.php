@@ -4,7 +4,8 @@
 	  session_start();
 	}  
 	  $query = "SELECT * FROM destinacije ORDER BY id DESC LIMIT 3 "; 
-	  
+	
+		
 ?>
 <!DOCTYPE html>
   <html>
@@ -291,8 +292,12 @@
 						</div>
 				</div>
 				<div class="card-action" style="border-bottom: 3px solid #368ce7;">
-					<a href="detaljiDestinacije.php?id=<?= $row['id'] ?>">Details</a>
-					<a href="#">Reservation</a>
+					<a class="waves-effect waves-teal" href="detaljiDestinacije.php?id=<?= $row['id'] ?>">Details</a>
+					<?php if (empty($_SESSION['id_kor'])): ?>
+					<a class="tooltipped" data-position="top" data-tooltip="You must login">Book Now</a>
+					<?php else: ?>
+					<a href="detaljiDestinacije.php?id=<?= $row['id'] ?>">Book Now</a>
+					<?php endif?>
 				</div>
 			</div>
 		</div>
@@ -327,6 +332,11 @@
 				function(){ $(this).addClass('okolo') },
 				function() { $(this).removeClass('okolo')}
 			)
+
+			document.addEventListener('DOMContentLoaded', function() {
+				var elems = document.querySelectorAll('.tooltipped');
+				var instances = M.Tooltip.init(elems, options);
+			});
 		</script>
 		<script type="text/javascript" src="js/materialize.js"></script>
 		

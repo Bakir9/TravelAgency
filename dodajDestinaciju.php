@@ -3,11 +3,7 @@
     session_start();
     include('log.php');
     $message = " ";
-    $message = '<div id="message" class="col s12" style="height: 50px;">
-        <div class="row card-panel light-green accent-2">
-            <div class="green-text text-light-green darken-4 col s12">Destinacija uspješno dodana !</div>
-        </div>
-    </div>';
+    #/storage/ssd2/342/172342/public_html/TravelAgency/adminPanel.php
   if(isset($_POST['dodaj'])){
         
         $naziv_destinacije = $_POST['naziv'];

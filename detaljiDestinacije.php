@@ -4,13 +4,48 @@ if (session_status() == PHP_SESSION_NONE) {
  session_start();
 }  
     $id_destinacije = $_GET['id'];
+    $message ="";
+    if(isset($_GET['id'])){
+        $query = "SELECT * FROM destinacije WHERE id = $id_destinacije";
+        $result = mysqli_query($conn, $query);
+        $r = mysqli_fetch_assoc($result);
 
-    $query = "SELECT * FROM destinacije WHERE id = $id_destinacije";
-    $result = mysqli_query($conn, $query);
-    $r = mysqli_fetch_assoc($result);
+        $sql = "SELECT * FROM dani WHERE id_destinacije = $id_destinacije";
+        $res = mysqli_query($conn, $sql);
+    }
+    
+    if(isset($_POST['rezervacija'])){
 
-    $sql = "SELECT * FROM dani WHERE id_destinacije = $id_destinacije";
-    $res = mysqli_query($conn, $sql);
+        if(!empty($brojPutnika)){
+            $brojPutnika = $_POST['brojPutnika'];
+            $dodatna = $_POST['dodatna'];
+            $idKorisnika = $_SESSION['id_kor'];
+
+            $upit = "INSERT INTO rezervacije VALUES ('0', '$id_destinacije', '$idKorisnika', '$brojPutnika', '$dodatna')";
+            $rezultat = mysqli_query($conn, $upit);
+
+            if($rezultat){
+                $dbidkorisnika = $_SESSION['id_kor'];
+                $korisnik = $_SESSION['korisnik'];
+                include('log.php');
+                $nazivAktivnosti = "Rezervacija od korisnika $idKorisnika";
+                logActivity($dbidkorisnika, $korisnik, $nazivAktivnosti, $conn);
+                $message = '<div id="message" class="col s12">
+                                <div class="row card-panel light-green accent-2">
+                                    <div class="green-text text-light-green darken-4 col s12">Uspješna rezervacija !</div>
+                                </div>
+                            </div>';
+            }
+        }
+        else {
+            $message = '<div id="message" class="col s12">
+                            <div class="row card-panel red darken-4">
+                                <div class="white-text center-align s12">Unesit broj putnika !</div>
+                            </div>
+                        </div>';
+            } 
+    }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,25 +113,36 @@ if (session_status() == PHP_SESSION_NONE) {
         </div>
         <div class="col s3 z-depth-3 center-align" style="margin-top:20px;">
             <p class="reservation">Book now</p>
-            <form>
-                <div class="input-field  offset-s1" style="margin-left:10px;">
-                    <input placeholder="First Name" id="first_name" type="text" class="validate">
-                    <label for="first_name">First Name</label>
+            <form action="" method="POST">
+                <div class="input-field " style="margin-left:10px;">
+					<select name="brojPutnika">
+                        <option value="">Broj putnika</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+					</select>
                 </div>
                 <div class="input-field " style="margin-left:10px;">
-                    <input placeholder="Last Name" id="last_name" type="text" class="validate">
-                    <label for="last_name">Last Name</label>
-                </div>
-                <div class="input-field " style="margin-left:10px;">
-                    <input placeholder="E-mail" id="e-mail" type="text" class="validate">
-                    <label for="e-mail">E-mail</label>
+                    <textarea id="textarea" class="materialize-textarea" name="dodatna"></textarea>
+                    <label for="textarea2">Dodatna pitanja</label>
                 </div>
                 <div class="input-field center-align">
-                    <button class="btn waves-effect waves-light" value="submit"
-                        type="submit" name="dodaj"  style="margin-bottom:15px;">
+                <?php if (empty($_SESSION['id_kor'])): ?>
+                    <button  class="disabled btn waves-effect waves-light tooltipped" value="submit" 
+                    data-position="top" data-tooltip="You must login" style="margin-bottom:15px;">
                         Submit
                     </button>
+                <?php else: ?>
+                    <button class="btn waves-effect waves-light" value="submit" name="rezervacija" 
+                    style="margin-bottom:15px;">
+                        Submit
+                    </button>
+                <?php endif?>
                 </div>
+                <?php echo $message ?>
             </form>
         </div>
     </div>
@@ -146,8 +192,24 @@ if (session_status() == PHP_SESSION_NONE) {
       <?php  include 'templates/footer.php'; ?> 
         <script type="text/javascript" src="js/materialize.js"></script>
         <script>
+        	document.addEventListener('DOMContentLoaded', function() {
+				var elems = document.querySelectorAll('select');
+				var options = {}
+				var instances = M.FormSelect.init(elems, options);
+			});
             $(document).ready(function(){
                     $('.tabs').tabs();
+                });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.tooltipped');
+                var instances = M.Tooltip.init(elems, options);
+            });
+
+            $(document).ready(function () {
+                setTimeout(function () {
+                    $('#message').hide();
+                }, 3000);
                 });
         </script>
     

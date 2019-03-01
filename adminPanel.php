@@ -1,7 +1,10 @@
 <?php 
   if (session_status() == PHP_SESSION_NONE) {
       session_start();
-    } 
+      if(!isset($_SESSION['id_kor'])){ 
+          header("Location: prijava.php");
+      }   
+  } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,8 +60,9 @@
         <li><a href="planAktivnosti.php"><i class="inline-icon material-icons" style="margin-right: 5px;">edit</i>Plan aktivnosti</a></li>
         <li><a href="urediAktivnosti.php"><i class="inline-icon material-icons" style="margin-right: 5px;">edit</i>Uredi plan aktivnosti</a></li>
         <li><a href="sveDestinacije.php"><i class="inline-icon material-icons" style="margin-right: 5px;">view_module</i>Pregled destinacija</a></li>
+        <li><a href="pregledRezervacija.php"><i class="inline-icon material-icons" style="margin-right: 5px;">view_module</i>Pregled rezervacija</a></li>
         <div class="divider teal lighten-2" style="margin-bottom: 10px;"></div>
-        <li><a href="napisiBlog.php"><i class="inline-icon material-icons" v>create</i>Napiši blog</a></li>
+        <li><a href="napisiBlog.php"><i class="inline-icon material-icons">create</i>Napiši blog</a></li>
         <li><a href="pregledSvojihBlogova.php"><i class="inline-icon material-icons" style="margin-right: 5px;">view_module</i>Pregled svojih blogova</a></li>
         <div class="divider teal lighten-2" style="margin-bottom: 10px;"></div>
         <li><a href="pregledAktivnosti.php"><i class="inline-icon material-icons" style="margin-right: 5px;">view_module</i>Pregled aktivnosti</a></li>
@@ -75,10 +79,11 @@
         <li><a href="racunKorisnika.php"><i class="inline-icon material-icons"style="margin-right: 5px;">edit</i>Vaš račun</a></li>
         <div class="divider teal lighten-2" style="margin-bottom: 10px;"></div>
         <li><a href="dodajDestinaciju.php"><i class="inline-icon material-icons" style="margin-right: 5px;">add</i>Dodaj destinaciju</a></li>
-        <li><a href="planAktivnosti.php"><i class="inline-icon material-icons" style="margin-right: 5px;">edit</i>Plan akivnosti</a></li>
+        <li><a href="planAktivnosti.php"><i class="inline-icon material-icons" style="margin-right: 5px;">edit</i>Plan aktivnosti</a></li>
         <li><a href="sveDestinacije.php"><i class="inline-icon material-icons" style="margin-right: 5px;">view_module</i>Pregled destinacija</a></li>
+        <li><a href="pregledRezervacija.php"><i class="inline-icon material-icons" style="margin-right: 5px;">view_module</i>Pregled rezervacija</a></li>
         <div class="divider teal lighten-2" style="margin-bottom: 10px;"></div>
-        <li><a href="napisiBlog.php"><i class="inline-icon material-icons">delete</i>Napiši blog</a></li>
+        <li><a href="napisiBlog.php"><i class="inline-icon material-icons">create</i>Napiši blog</a></li>
         <li><a href="pregledSvojihBlogova.php"><i class="inline-icon material-icons" style="margin-right: 5px;">view_module</i>Pregled svojih blogova</a></li>
         <div class="divider teal lighten-2" style="margin-bottom: 10px;"></div>
         <li><a href="index.php"><i class="inline-icon material-icons">home</i>Vrati na početnu</a></li>
